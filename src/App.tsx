@@ -8,12 +8,12 @@ import classNames from 'classnames';
 
 const Chart1 = () => {
   const option = {
-    
-    
+
+
     series: [
-      
+
       {
-        
+
         type: 'gauge',
         min: 0,
         max: 240,
@@ -25,8 +25,8 @@ const Chart1 = () => {
           lineStyle: {
             width: 48,
             color: [
-              [0.54, "#d0e9c6"], 
-              [1, "#fff"], 
+              [0.54, "#d0e9c6"],
+              [1, "#fff"],
             ],
           },
         },
@@ -40,9 +40,9 @@ const Chart1 = () => {
           show: false
         },
       },
-      
+
       {
-        
+
         type: 'gauge',
         startAngle: 90,
         endAngle: -270,
@@ -50,13 +50,13 @@ const Chart1 = () => {
           show: false,
         },
         axisLine: {
-          
+
           lineStyle: {
             width: 17,
             color: [
               [1, "#fff"],
             ],
-            
+
           }
         },
         splitLine: {
@@ -91,9 +91,9 @@ const Chart1 = () => {
         axisLabel: {
           show: false
         },
-      },  
+      },
       {
-        
+
         type: 'gauge',
         startAngle: 90,
         endAngle: -270,
@@ -138,7 +138,7 @@ const Chart1 = () => {
             color: '#333333'
           }
         },
-        axisLabel: {          
+        axisLabel: {
           distance: 14,
           formatter: (value: number) => {
             if (value === 0) {
@@ -200,9 +200,9 @@ const Chart1 = () => {
               padding: [0, 0, 3, 0]
             },
           }
-          
+
         },
-        pointer: {          
+        pointer: {
           icon: 'path://M2090.36389,615.30999 L2090.36389,615.30999 C2091.48372,615.30999 2092.40383,616.194028 2092.44859,617.312956 L2096.90698,728.755929 C2097.05155,732.369577 2094.2393,735.416212 2090.62566,735.56078 C2090.53845,735.564269 2090.45117,735.566014 2090.36389,735.566014 L2090.36389,735.566014 C2086.74736,735.566014 2083.81557,732.63423 2083.81557,729.017692 C2083.81557,728.930412 2083.81732,728.84314 2083.82081,728.755929 L2088.2792,617.312956 C2088.32396,616.194028 2089.24407,615.30999 2090.36389,615.30999 Z',
           length: '110%',
           offsetCenter: [0, '30%'],
@@ -220,7 +220,7 @@ const Chart1 = () => {
             color: '#4684ee'
           }
         },
-        
+
         title: {
           show: true,
           fontSize: 28,
@@ -243,8 +243,8 @@ const Chart1 = () => {
 
 
   return <ReactECharts
-    option={option}    
-    style={{height: '360px', width: '360px'}}
+    option={option}
+    style={{ height: '360px', width: '360px' }}
   />
 }
 
@@ -260,7 +260,7 @@ const Chart2 = () => {
       borderWidth: 2,
       textStyle: {
         color: "#fff",
-        fontSize: 12, 
+        fontSize: 12,
         fontWeight: "bold"
       },
       padding: 10,
@@ -276,7 +276,7 @@ const Chart2 = () => {
       data: ['Raw logs', 'Events', 'Cases', 'Incidents']
     },
     series: [
-      {  
+      {
         type: 'funnel',
         maxSize: '170%',
         label: {
@@ -297,7 +297,7 @@ const Chart2 = () => {
           label: {
             fontSize: 20,
             fontWeight: "bold",
-            
+
           }
         },
         data: [
@@ -312,8 +312,264 @@ const Chart2 = () => {
   };
 
   return <ReactECharts
-    option={option}    
-    style={{height: '400px', width: '400px'}}
+    option={option}
+    style={{ height: '400px', width: '400px' }}
+  />
+
+}
+
+const Chart3 = () => {
+  const data = [
+
+    {
+      name: 'Capital Market',
+      itemStyle: {
+        color: '#da0d68'
+      },
+      children: [
+        {
+          name: 'TH066 RREE',
+          value: 2.5,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH645 USERS',
+          value: 0.9,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH652 ACCO',
+          value: 2.5,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH9010 MAL',
+          value: 2.1,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'UAT2_FWD_C',
+          value: 2.5,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+      ]
+    },
+    {
+      name: 'Wealth Management',
+      itemStyle: {
+        color: '#da0d68'
+      },
+      children: [
+        {
+          name: 'TH066 RREE',
+          value: 1.8,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH645 USERS',
+          value: 0.9,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH652 ACCO',
+          value: 1.5,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+      ]
+    },
+
+    {
+      name: 'Payment and Treasury',
+      itemStyle: {
+        color: '#da0d68'
+      },
+      children: [
+        {
+          name: 'TH066 RREE',
+          value: 2.5,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH645 USERS',
+          value: 2,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH652 ACCO',
+          value: 0.2,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+      ]
+    },
+
+
+    {
+      name: 'Tehnology and Operations',
+      itemStyle: {
+        color: '#da0d68'
+      },
+      children: [
+        {
+          name: 'TH066 RREE',
+          value: 0.3,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH645 USERS',
+          value: 2,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH652 ACCO',
+          value: 0.2,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH9010 MAL',
+          value: 1.2,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'UAT2_FWD_C',
+          value: 1,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+      ]
+    },
+
+    {
+      name: 'Retail Banking',
+      itemStyle: {
+        color: '#da0d68'
+      },
+      children: [
+        {
+          name: 'TH066 RREE',
+          value: 0.8,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH645 USERS',
+          value: 1.8,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH652 ACCO',
+          value: 2,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'TH9010 MAL',
+          value: 2.5,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+        {
+          name: 'UAT2_FWD_C',
+          value: 0.2,
+          itemStyle: {
+            color: '#975e6d'
+          }
+        },
+      ]
+    },
+
+
+
+  ];
+
+  const option = {
+
+    series: {
+      type: 'sunburst',
+      data: data,
+      radius: [0, '95%'],
+      sort: undefined,
+      emphasis: {
+        focus: 'none'
+      },
+      levels: [
+        {},
+        {
+          r0: '15%',
+          r: '55%',
+          itemStyle: {
+            borderWidth: 2
+          },
+          label: {
+            fontSize: 8,
+            fontWeight: 1000,
+            overflow: 'break',
+            lineHeight: 10,
+            width: 50,
+            rich: {
+              wrap: {
+                width: 50,
+                overflow: 'break',
+                lineHeight: 10
+              }
+            }
+          }
+        },
+        {
+          r0: '58%',
+          r: '80%',
+          label: {
+            fontSize: 8,
+            fontWeight: 1000,
+            align: 'right',
+            position: 'outside',
+            padding: 3,
+            silent: false
+          }
+        },
+
+      ]
+    }
+  };
+
+  return <ReactECharts
+    option={option}
+    style={{ height: '360px', width: '360px' }}
   />
 
 }
@@ -324,10 +580,10 @@ const App = () => {
   const [hideImg, setHideImg] = useState<boolean>(false);
   const [hideWork, setHideWork] = useState<boolean>(false);
 
-  
-  
+
+
   return <div>
-    
+
     <h1 className="text-3xl font-bold underline">
       Hello world!
     </h1>
@@ -346,14 +602,14 @@ const App = () => {
         Hide work
       </button>
     </div>
-    
-    
+
+
 
     <div className="flex items-center justify-center h-screen">
       <div className={classNames('absolute', {
         'hidden': hideImg
       })}>
-        <img src='/rowlogs.png' />
+        <img src='/lob.png' />
       </div>
 
       <div className={classNames('absolute', {
@@ -361,12 +617,12 @@ const App = () => {
         'opacity-50': !hideWork,
         'opacity-100': !hideWork && hideImg
       })}>
-        <Chart2 />
+        <Chart3 />
       </div>
 
     </div>
 
-    
+
 
     <div className="flex items-center">
       <div className=''>
@@ -385,7 +641,7 @@ const App = () => {
         <Chart2 />
       </div>
     </div>
-    
+
   </div>;
 };
 
