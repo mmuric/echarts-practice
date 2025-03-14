@@ -324,42 +324,42 @@ const Chart3 = () => {
     {
       name: 'Capital Market',
       itemStyle: {
-        color: '#da0d68'
+        color: '#246387'
       },
       children: [
         {
           name: 'TH066 RREE',
-          value: 2.5,
+          value: 2.3,
           itemStyle: {
-            color: '#975e6d'
+            color: '#c4da6b'
           }
         },
         {
           name: 'TH645 USERS',
-          value: 0.9,
+          value: 0.7,
           itemStyle: {
-            color: '#975e6d'
+            color: '#6faff9'
           }
         },
         {
           name: 'TH652 ACCO',
-          value: 2.5,
+          value: 2.4,
           itemStyle: {
-            color: '#975e6d'
+            color: '#e95d2b'
           }
         },
         {
           name: 'TH9010 MAL',
-          value: 2.1,
+          value: 1.6,
           itemStyle: {
-            color: '#975e6d'
+            color: '#a9a0cb'
           }
         },
         {
           name: 'UAT2_FWD_C',
-          value: 2.5,
+          value: 2.4,
           itemStyle: {
-            color: '#975e6d'
+            color: '#a2bac5'
           }
         },
       ]
@@ -367,28 +367,28 @@ const Chart3 = () => {
     {
       name: 'Wealth Management',
       itemStyle: {
-        color: '#da0d68'
+        color: '#246387'
       },
       children: [
         {
           name: 'TH066 RREE',
-          value: 1.8,
+          value: 1.5,
           itemStyle: {
-            color: '#975e6d'
+            color: '#c4da6b'
           }
         },
         {
           name: 'TH645 USERS',
-          value: 0.9,
+          value: 0.7,
           itemStyle: {
-            color: '#975e6d'
+            color: '#6faff9'
           }
         },
         {
           name: 'TH652 ACCO',
-          value: 1.5,
+          value: 1.2,
           itemStyle: {
-            color: '#975e6d'
+            color: '#e95d2b'
           }
         },
       ]
@@ -397,28 +397,28 @@ const Chart3 = () => {
     {
       name: 'Payment and Treasury',
       itemStyle: {
-        color: '#da0d68'
+        color: '#246387'
       },
       children: [
         {
           name: 'TH066 RREE',
-          value: 2.5,
+          value: 2.3,
           itemStyle: {
-            color: '#975e6d'
+            color: '#c4da6b'
           }
         },
         {
           name: 'TH645 USERS',
           value: 2,
           itemStyle: {
-            color: '#975e6d'
+            color: '#6faff9'
           }
         },
         {
           name: 'TH652 ACCO',
-          value: 0.2,
+          value: 0.4,
           itemStyle: {
-            color: '#975e6d'
+            color: '#e95d2b'
           }
         },
       ]
@@ -428,42 +428,42 @@ const Chart3 = () => {
     {
       name: 'Tehnology and Operations',
       itemStyle: {
-        color: '#da0d68'
+        color: '#246387'
       },
       children: [
         {
           name: 'TH066 RREE',
           value: 0.3,
           itemStyle: {
-            color: '#975e6d'
+            color: '#c4da6b'
           }
         },
         {
           name: 'TH645 USERS',
           value: 2,
           itemStyle: {
-            color: '#975e6d'
+            color: '#6faff9'
           }
         },
         {
           name: 'TH652 ACCO',
-          value: 0.2,
+          value: 0.4,
           itemStyle: {
-            color: '#975e6d'
+            color: '#e95d2b'
           }
         },
         {
           name: 'TH9010 MAL',
           value: 1.2,
           itemStyle: {
-            color: '#975e6d'
+            color: '#a9a0cb'
           }
         },
         {
           name: 'UAT2_FWD_C',
           value: 1,
           itemStyle: {
-            color: '#975e6d'
+            color: '#a2bac5'
           }
         },
       ]
@@ -472,42 +472,42 @@ const Chart3 = () => {
     {
       name: 'Retail Banking',
       itemStyle: {
-        color: '#da0d68'
+        color: '#246387'
       },
       children: [
         {
           name: 'TH066 RREE',
           value: 0.8,
           itemStyle: {
-            color: '#975e6d'
+            color: '#c4da6b'
           }
         },
         {
           name: 'TH645 USERS',
           value: 1.8,
           itemStyle: {
-            color: '#975e6d'
+            color: '#6faff9'
           }
         },
         {
           name: 'TH652 ACCO',
           value: 2,
           itemStyle: {
-            color: '#975e6d'
+            color: '#e95d2b'
           }
         },
         {
           name: 'TH9010 MAL',
-          value: 2.5,
+          value: 2.3,
           itemStyle: {
-            color: '#975e6d'
+            color: '#a9a0cb'
           }
         },
         {
           name: 'UAT2_FWD_C',
-          value: 0.2,
+          value: 0.4,
           itemStyle: {
-            color: '#975e6d'
+            color: '#a2bac5'
           }
         },
       ]
@@ -518,11 +518,16 @@ const Chart3 = () => {
   ];
 
   const option = {
-
+    // grid: {
+    //   left: 100, // Add some padding on the left
+    //   right: 100, // Add some padding on the right
+    //   top: 100, // Add some padding on the top
+    //   bottom: 100 // Add some padding on the bottom
+    // },
     series: {
       type: 'sunburst',
       data: data,
-      radius: [0, '95%'],
+      radius: [0, '90%'],
       sort: undefined,
       emphasis: {
         focus: 'none'
@@ -556,13 +561,13 @@ const Chart3 = () => {
           label: {
             fontSize: 8,
             fontWeight: 1000,
-            align: 'right',
+            align: 'center', // Center labels to prevent cutoff
             position: 'outside',
             padding: 3,
-            silent: false
+            distance: 2, // Increase space between text and segments
+            silent: false,
           }
         },
-
       ]
     }
   };
@@ -577,7 +582,7 @@ const Chart3 = () => {
 
 
 const App = () => {
-  const [hideImg, setHideImg] = useState<boolean>(false);
+  const [hideImg, setHideImg] = useState<boolean>(true);
   const [hideWork, setHideWork] = useState<boolean>(false);
 
 
